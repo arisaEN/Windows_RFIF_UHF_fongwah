@@ -286,7 +286,7 @@ namespace UHFtest
                     bufEPC[i] = bufDataR[offset + 2 + i];
 
                 string epc = BitConverter.ToString(bufEPC, 0, bufDataR[offset] - 1).Replace("-", "");
-
+                string label = GetTagLabel_StaffIdentityCard(epc);
                 bool allowDisplay = true;
 
                 if (!cb_AllowDuplicates.Checked)
@@ -304,14 +304,21 @@ namespace UHFtest
                     epcLastSeen[epc] = DateTime.Now;
                 }
 
+                ///社員証検出した場合の処理 ポップアップ表示
                 if (allowDisplay)
                 {
-                    // 音＋LED（表示されたときだけ鳴らす）
+                    // ✅ チェックポップアップ条件：「連続検出OFF」かつ「社員証」
+                    if (!cb_AllowDuplicates.Checked && label == "社員証")
+                    {
+                        var popup = new FormCheckPopup(); // ※別途作成必要
+                        popup.Show(); // 非同期で表示
+                    }
+
+                    // ✅ 音＋LED（表示されたときだけ鳴らす）
                     uhf_action(persistentDeviceHandle, 0x01 | 0x04, 30);
 
-                    string label = GetTagLabel_StaffIdentityCard(epc);
+                    // ✅ ListViewに記録
                     string timestamp = DateTime.Now.ToString("HH:mm:ss");
-
                     var item = new ListViewItem(timestamp);
                     item.SubItems.Add(label);
                     lV_Continuous.Items.Add(item);
@@ -322,6 +329,7 @@ namespace UHFtest
                 offset += bufDataR[offset] + 1;
             }
         }
+
 
 
         // EPCをラベルに変換（必要なら複数パターン追加可）
