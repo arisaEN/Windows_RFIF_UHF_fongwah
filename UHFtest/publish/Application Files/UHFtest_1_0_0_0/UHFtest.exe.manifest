@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="UHFtest.exe" version="1.0.0.0" publicKeyToken="9a29215ee443dcc9" language="neutral" processorArchitecture="x86" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="UHFtest" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
+    <commandLine file="UHFtest.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC マニフェスト オプション
+          Windows のユーザー アカウント制御のレベルを変更するには、
+          requestedExecutionLevel ノードを以下のいずれかで置換します。
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         下位互換性を保つためにファイルおよびレジストリの仮想化を使用する場合、
+         requestedExecutionLevel ノードを削除します。
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="2.0.50727.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="System.Core" version="3.5.0.0" publicKeyToken="b77a5c561934e089" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="WindowsBase" version="3.0.0.0" publicKeyToken="31bf3856ad364e35" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ja\mscorlib.resources.dll" size="362376">
+      <assemblyIdentity name="mscorlib.resources" version="2.0.0.0" publicKeyToken="B77A5C561934E089" language="ja" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>y2tpkMtORQrX+vJungyyectUOPI=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="UHFtest.exe" size="16296">
+      <assemblyIdentity name="UHFtest" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>mrF9GIxCcfTm46O4l7DCIcpQDEM=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+<publisherIdentity name="CN=DESKTOP-ARISA\Root" issuerKeyHash="f029bc1eb02aaf5a8372adb421b95bdc4cc1c776" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>lGrnBnQq2LjlRpY5JdJ4HaDlEx0=</DigestValue></Reference></SignedInfo><SignatureValue>G1Aq+o8Q83vcpiG9i8lcKQAsvfpwCeOtB22khMdgEDJBTaHHkBkVrkIMJWTbBy5F47aeTLUVoaZ+mRVcP9bD0yAH/d0XDXNL8RxiAxfVx3AJYSgwebf1tYXTxnyhs66unlqyqi6d8/dzmWhRdQG1AAR04JXhutZsmWhiNVWuNNs=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>uqV9sqKr2cIva1yjcwhxs+qlYNrE/Ssri2h8RbrTPgFCD3mgCZnSo4aZ/Hqc5c9W0vQR1nTa2a7Qh5rxF5OQViRD6ma7HVwyHxqeR2ZYiwb4uKSqwtBnSY4Pczn8K+E9iZNyHm2eDsZCSRdy4hGOGvUbJwPEbFyOXORXzzSnC+0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="1d13e5a01d78d225399646e5b8d82a7406e76a94" Description="" Url=""><as:assemblyIdentity name="UHFtest.exe" version="1.0.0.0" publicKeyToken="9a29215ee443dcc9" language="neutral" processorArchitecture="x86" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=DESKTOP-ARISA\Root</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>XtwbUN4zGo3wEE/vv39s29ljQ+A=</DigestValue></Reference></SignedInfo><SignatureValue>d3g2dQMibS1n1Mdb+v4OckZrBK/3NF/PAOmJsA00AvS8PQzVJSPGTNsnJ9q1Lale4rkbidLlA20OKcByZSygJ53zlr6xNeypGjyjJIYyjWJiozKaLgyDlszeaovDi5OuScCF1sIZJTjUS3BIP/V4zSzAyQS/Cy1yb2HpRXj6WrI=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>uqV9sqKr2cIva1yjcwhxs+qlYNrE/Ssri2h8RbrTPgFCD3mgCZnSo4aZ/Hqc5c9W0vQR1nTa2a7Qh5rxF5OQViRD6ma7HVwyHxqeR2ZYiwb4uKSqwtBnSY4Pczn8K+E9iZNyHm2eDsZCSRdy4hGOGvUbJwPEbFyOXORXzzSnC+0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB4TCCAUqgAwIBAgIQGY4F4W3NErFHn+XkOYnHPzANBgkqhkiG9w0BAQUFADAvMS0wKwYDVQQDHiQARABFAFMASwBUAE8AUAAtAEEAUgBJAFMAQQBcAFIAbwBvAHQwHhcNMjUwNjE1MDIyNzI2WhcNMjYwNjE1MDgyNzI2WjAvMS0wKwYDVQQDHiQARABFAFMASwBUAE8AUAAtAEEAUgBJAFMAQQBcAFIAbwBvAHQwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBALqlfbKiq9nCL2tco3MIcbPqpWDaxP0rK4tofEW60z4BQg95oAmZ0qOGmfx6nOXPVtL0EdZ02tmu0Iea8ReTkFYkQ+pmux1cMh8ankdmWIsG+LikqsLQZ0mOD3M5/CvhPYmTch5tng7GQkkXcuIRjhr1GycDxGxcjlzkV880pwvtAgMBAAEwDQYJKoZIhvcNAQEFBQADgYEAgTN49z6NAxCOBsjtqQC5WtV2u2hkMhn3g56wMlA3Qhhhv9DMrLHLcLkhj0Wf0eHIeARihDG2dn+HIAwFDz+5E2sLd+jUIUIeun467aqjeZfl6nhCl7L8ArY/eb7JTTgGsyUXZFP39TbLuOf4mahBzwvRZXmChievDRgD3LlYRR0=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
